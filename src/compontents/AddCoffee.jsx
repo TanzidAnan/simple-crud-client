@@ -4,25 +4,19 @@ const AddCoffee = () => {
         <div>
             <h1>add coffee</h1>
 
-            <form>
-                <div>
-                    <div className="form-control">
+            <form className="bg-sky-500 w-10/12 mx-auto px-7 py-3">
+                <div className="flex gap-4">
+                    <div className="form-control w-[50%]">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text">Name</span>
                         </label>
-                        <input type="email" placeholder="email" className="input input-bordered" required />
+                        <input type="text" placeholder="Coffee Name" className="input input-bordered" required />
                     </div>
-                    <div className="form-control">
+                    <div className="form-control w-[50%]">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text">Avable Quentaty</span>
                         </label>
-                        <input type="password" placeholder="password" className="input input-bordered" required />
-                        <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                        </label>
-                    </div>
-                    <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <input type="text" placeholder="Quentaty" className="input input-bordered" required />
                     </div>
                 </div>
             </form>
