@@ -1,10 +1,12 @@
 
+import { useLoaderData } from 'react-router-dom'
 import './App.css'
 
 function App() {
+  const data =useLoaderData()
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Cole Coffee {data.length}</h1>
     </>
   )
 }
