@@ -3,21 +3,25 @@ const Home = () => {
 
     const hendleAddUsers =(e) =>{
         e.preventDefault();
-
+        const form =e.target;
+        const name =form.name.value;
+        const email =form.email.value;
+        const password =form.password.value;
+        const users ={name,email,password}
+        console.log(users)
     }
 
 
     return (
         <div>
             <h1>simple user crud</h1>
-            <form>
 
                 <form onSubmit={hendleAddUsers} className="card-body">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="name" name="name" placeholder="name" className="input input-bordered" required />
+                        <input type="text" name="name" placeholder="name" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -35,7 +39,6 @@ const Home = () => {
                         <button className="btn btn-primary">User</button>
                     </div>
                 </form>
-            </form>
         </div>
     );
 };
