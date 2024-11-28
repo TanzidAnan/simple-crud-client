@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const CoffeeCard = ({ data }) => {
+const CoffeeCard = ({ data,coffees,setCoffees }) => {
     console.log(data)
     const { _id, name, quentaty, supplier, taste, category, details, photo } = data;
     const hendlDelete = (_id) => {
@@ -32,6 +32,9 @@ const CoffeeCard = ({ data }) => {
                                 text: "Your coffee has been deleted.",
                                 icon: "success"
                             });
+                            const remaing =coffees.filter(cof => cof._id !== _id);
+                            console.log(remaing);
+                            setCoffees(remaing)
                         }
                     })
             }

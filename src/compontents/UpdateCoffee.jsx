@@ -5,7 +5,7 @@ const UpdateCoffee = () => {
     const coffe = useLoaderData();
     const { _id, name, quentaty, supplier, taste, category, details, photo } = coffe;
 
-    const hendleAddCoffee = (e) => {
+    const hendleUpdateCoffee = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -15,23 +15,22 @@ const UpdateCoffee = () => {
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
-        const newCoffee = { name, quentaty, supplier, taste, category, details, photo }
-        console.log(newCoffee)
+        const UpdateCoffee = { name, quentaty, supplier, taste, category, details, photo }
 
-        fetch('http://localhost:5000/coffee', {
-            method: 'POST',
+        fetch(`http://localhost:5000/coffee/${_id}`, {
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newCoffee)
+            body: JSON.stringify(UpdateCoffee)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.insertedId) {
+                if (data.modifiedCount>0) {
                     Swal.fire({
                         title: 'success',
-                        text: 'User added successfull',
+                        text: 'coffee update successfull',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -45,7 +44,7 @@ const UpdateCoffee = () => {
             <h2>update coffee {name}</h2>
 
             <div className="mt-10">
-                <form onSubmit={hendleAddCoffee} className="bg-sky-100 w-10/12 mx-auto px-7 py-3 pb-10">
+                <form onSubmit={hendleUpdateCoffee} className="bg-sky-100 w-10/12 mx-auto px-7 py-3 pb-10">
                     <h1 className="text-3xl text-center text-black font-bold">Update coffee {name}</h1>
                     <div className="flex gap-4">
                         <div className="form-control w-[50%]">
