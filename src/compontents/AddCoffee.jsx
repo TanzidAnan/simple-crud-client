@@ -39,8 +39,6 @@ const AddCoffee = () => {
 
     return (
         <div className="mt-10">
-
-
             <form onSubmit={hendleAddCoffee} className="bg-sky-100 w-10/12 mx-auto px-7 py-3 pb-10">
                 <h1 className="text-3xl text-center text-black font-bold">Add coffee</h1>
                 <div className="flex gap-4">
