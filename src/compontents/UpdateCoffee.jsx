@@ -58,7 +58,7 @@ const UpdateCoffee = () => {
                             <label className="label">
                                 <span className="label-text">Avable Quentaty</span>
                             </label>
-                            <input type="text" name="quentaty" placeholder="Quentaty" className="input input-bordered" required />
+                            <input type="text" name="quentaty" defaultValue={quentaty} placeholder="Quentaty" className="input input-bordered" required />
                         </div>
                     </div>
                     <div className="flex gap-4">
@@ -66,13 +66,13 @@ const UpdateCoffee = () => {
                             <label className="label">
                                 <span className="label-text">Supplier</span>
                             </label>
-                            <input type="text" name="supplier" placeholder="Enter coffee supplier" className="input input-bordered" required />
+                            <input type="text" name="supplier" defaultValue={supplier} placeholder="Enter coffee supplier" className="input input-bordered" required />
                         </div>
                         <div className="form-control w-[50%]">
                             <label className="label">
                                 <span className="label-text">Taste</span>
                             </label>
-                            <input type="text" name="taste" placeholder="Taste" className="input input-bordered" required />
+                            <input type="text" name="taste" defaultValue={taste} placeholder="Taste" className="input input-bordered" required />
                         </div>
                     </div>
                     <div className="flex gap-4">
@@ -80,13 +80,13 @@ const UpdateCoffee = () => {
                             <label className="label">
                                 <span className="label-text">Category</span>
                             </label>
-                            <input type="text" name="category" placeholder="Category" className="input input-bordered" required />
+                            <input type="text" name="category" defaultValue={category} placeholder="Category" className="input input-bordered" required />
                         </div>
                         <div className="form-control w-[50%]">
                             <label className="label">
                                 <span className="label-text">Details</span>
                             </label>
-                            <input type="text" name="details" placeholder="Quentaty" className="input input-bordered" required />
+                            <input type="text" name="details" defaultValue={details} placeholder="Quentaty" className="input input-bordered" required />
                         </div>
                     </div>
                     <div className="flex gap-4">
@@ -94,7 +94,7 @@ const UpdateCoffee = () => {
                             <label className="label">
                                 <span className="label-text">photo</span>
                             </label>
-                            <input type="text" name="photo" placeholder="photo" className="input input-bordered" required />
+                            <input type="text" name="photo" defaultValue={photo} placeholder="photo" className="input input-bordered" required />
                         </div>
                     </div>
                     <div>
