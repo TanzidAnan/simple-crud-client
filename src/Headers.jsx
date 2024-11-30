@@ -4,7 +4,8 @@ const Headers = () => {
 
     const links =<>
      <li><Link to='/'>Home</Link></li>
-     <li><Link to='/addCoffee'>addCoffee</Link></li>
+     <li><Link to='/addCoffee'>AddCoffee</Link></li>
+     <li><Link to='/singIn'>Login</Link></li>
     </>
 
     return (
