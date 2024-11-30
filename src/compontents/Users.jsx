@@ -4,10 +4,10 @@ import { useLoaderData } from "react-router-dom";
 const Users = () => {
     const userData = useLoaderData();
     console.log(userData)
-    const [user, setUser] = useState(userData)
+    const [users, setUser] = useState(userData)
     return (
         <div>
-            <h1 className="text-4xl text-center">Users {user.length}</h1>
+            <h1 className="text-4xl text-center">Users {users.length}</h1>
 
             <div className="overflow-x-auto">
                 <table className="table">
@@ -16,18 +16,20 @@ const Users = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
+                            <th>Email</th>
                             <th>Favorite Color</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                        <tr>
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                        </tr>
+                        {
+                            users.map(user =><tr key={user._id}>
+                                <th>1</th>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>Blue</td>
+                            </tr>)
+                        }
                     </tbody>
                 </table>
             </div>
