@@ -4,7 +4,10 @@ import { useLoaderData } from "react-router-dom";
 const Users = () => {
     const userData = useLoaderData();
     console.log(userData)
-    const [users, setUser] = useState(userData)
+    const [users, setUser] = useState(userData);
+    const hendleDelete =() =>{
+        
+    }
     return (
         <div>
             <h1 className="text-4xl text-center">Users {users.length}</h1>
