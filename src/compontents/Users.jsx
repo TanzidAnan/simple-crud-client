@@ -28,6 +28,10 @@ const Users = () => {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>{user?.createAte}</td>
+                                <td>
+                                    <button className="btn mx-3">Edit</button>
+                                    <button className="btn">x</button>
+                                </td>
                             </tr>)
                         }
                     </tbody>
