@@ -31,6 +31,9 @@ const Users = () => {
                                 text: "Your file has been deleted.",
                                 icon: "success"
                             });
+
+                            const remaing =users.filter(user => user._id !==id);
+                            setUser(remaing)
                         }
                     })
             }
