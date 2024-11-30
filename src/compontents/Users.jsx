@@ -27,7 +27,7 @@ const Users = () => {
                                 <th>1</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>Blue</td>
+                                <td>{user?.createAte}</td>
                             </tr>)
                         }
                     </tbody>
