@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const SignUp = () => {
+    const {creatUers} =useContext(AuthContext)
 
     const hendleSignUp =(e) =>{
         e.preventDefault();
