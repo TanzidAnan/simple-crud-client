@@ -6,7 +6,17 @@ const SignUp = () => {
 
     const hendleSignUp =(e) =>{
         e.preventDefault();
+        const email =e.target.email.value;
+        const password =e.target.password.value;
+        console.log(email,password)
         console.log('hello from')
+        creatUers(email,password)
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
     }
 
     return (
