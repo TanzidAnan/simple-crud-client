@@ -30,7 +30,7 @@ const Users = () => {
                                 <td>{user?.createAte}</td>
                                 <td>
                                     <button className="btn mx-3">Edit</button>
-                                    <button className="btn">x</button>
+                                    <button onClick={hendleDelete} className="btn bg-red-400">x</button>
                                 </td>
                             </tr>)
                         }
