@@ -7,6 +7,7 @@ const Headers = () => {
      <li><Link to='/addCoffee'>AddCoffee</Link></li>
      <li><Link to='/singIn'>Login</Link></li>
      <li><Link to='/singUp'>Login</Link></li>
+     <li><Link to='/users'>users</Link></li>
     </>
 
     return (

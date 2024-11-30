@@ -13,6 +13,7 @@ import Roots from './compontents/Roots.jsx';
 import SignIn from './compontents/SignIn.jsx';
 import SignUp from './compontents/SignUp.jsx';
 import AuthProvider from './Providers/AuthProvider.jsx';
+import Users from './compontents/Users.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/singUp',
-        element: <SignUp></SignUp>
+        element: <SignUp></SignUp>,
+      },
+      {
+        path:'/users',
+        element:<Users></Users>,
+        loader:() => fetch('http://localhost:5000/users')
       }
     ]
   }
