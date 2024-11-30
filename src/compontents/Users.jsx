@@ -5,8 +5,8 @@ const Users = () => {
     const userData = useLoaderData();
     console.log(userData)
     const [users, setUser] = useState(userData);
-    const hendleDelete =() =>{
-        
+    const hendleDelete =(id) =>{
+        console.log(id)
     }
     return (
         <div>
@@ -33,7 +33,7 @@ const Users = () => {
                                 <td>{user?.createAte}</td>
                                 <td>
                                     <button className="btn mx-3">Edit</button>
-                                    <button onClick={hendleDelete} className="btn bg-red-400">x</button>
+                                    <button onClick={() =>hendleDelete(user._id)} className="btn bg-red-400">x</button>
                                 </td>
                             </tr>)
                         }
