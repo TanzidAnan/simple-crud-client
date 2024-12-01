@@ -1,10 +1,36 @@
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const SignIn = () => {
+    const {signInUser} =useContext(AuthContext)
+
+    const hendleSignIn = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+        signInUser(email,password)
+        .then(res =>{
+            console.log(res.user)
+            const lastSingInTime =res.user.metadata.lastSignInTime;
+            const loginInfo={email,lastSingInTime}
+
+            fetch(`http://localhost:5000/users`,{
+                
+            })
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
+    }
+
+
+
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Sign Up</h1>
+                    <h1 className="text-5xl font-bold">Sign IN</h1>
                     <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
